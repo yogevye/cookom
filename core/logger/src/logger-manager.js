@@ -8,7 +8,7 @@ const LEVELS = {
     info: 3,
     http: 4,
     debug: 5
-}
+};
 
 class LoggerManager {
     logger;
@@ -34,28 +34,28 @@ class LoggerManager {
         })
     }
 
-    info(message, functionName) {
-        this.logger.log({level: 'info', message});
+    info(message, transactionId) {
+        this.logger.log({level: 'info', message, transactionId});
     }
 
-    debug(message, functionName) {
-        this.logger.log({level: 'debug', message});
+    debug(message, transactionId) {
+        this.logger.log({level: 'debug', message, transactionId});
     }
 
-    warn(message, functionName) {
-        this.logger.log({level: 'warn', message});
+    warn(message, transactionId) {
+        this.logger.log({level: 'warn', message, transactionId});
     }
 
-    error(message, functionName) {
-        this.logger.log({level: 'error', message});
+    error(message, transactionId) {
+        this.logger.log({level: 'error', message, transactionId});
     }
 
-    alert(message, functionName) {
-        this.logger.log({level: 'alert', message});
+    alert(message, transactionId) {
+        this.logger.log({level: 'alert', message, transactionId});
     }
 
-    http(message, functionName) {
-        this.logger.log({level: 'http', message});
+    http(message, transactionId) {
+        this.logger.log({level: 'http', message, transactionId});
     }
 }
 
