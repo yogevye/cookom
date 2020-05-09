@@ -1,0 +1,11 @@
+{
+  "name": "@cookom/common-mongo-db",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Yogev Yehuda",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "mongoose": "^5.9.13"
+  }
+}
