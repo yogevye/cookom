@@ -1,0 +1,21 @@
+{
+  "name": "cookom",
+  "version": "1.0.0",
+  "description": "cookom workspace",
+  "main": "index.js",
+  "repository": "https://github.com/yogevye/cookom.git",
+  "author": "yogevye <yogevye1@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "core/*",
+    "commmon/*",
+    "routes/*",
+    "services/*"
+  ],
+  "scripts": {},
+  "dependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
