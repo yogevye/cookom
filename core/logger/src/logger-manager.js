@@ -1,4 +1,4 @@
-const winston = require('winston')
+const winston = require('winston');
 const {combine, timestamp, label, prettyPrint, json, colorize} = winston.format;
 
 const LEVELS = {

@@ -1,8 +1,11 @@
 {
-  "name": "@cookom/logger",
+  "name": "@cookom/core-logger",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Yogev Yehuda",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "winston": "^3.2.1"
+  }
 }
