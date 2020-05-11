@@ -1,4 +1,4 @@
-const OrderSchema = require('order.schema');
+const OrderSchema = require('core/mongo-db/src/schemas/order-schema/order.schema');
 import {addCommonPostHooks} from '../../common/common-hooks'
 
 addCommonPostHooks(OrderSchema);
