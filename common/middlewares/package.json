@@ -1,0 +1,12 @@
+{
+  "name": "@cookom/common-middlewares",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "Yogev Yehuda",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@cookom/core-logger": "1.0.0",
+    "uuid": "^8.0.0"
+  }
+}
