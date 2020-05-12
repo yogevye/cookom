@@ -5,9 +5,10 @@ const {addUserSchemaHooks} = require('./user-model.hooks');
 const {addUserSchemaMethods} = require('./user-model.methods');
 const {addUserSchemaStatics} = require('./user-model.statics');
 
-addUserSchemaHooks(UserSchema);
-addUserSchemaMethods(UserSchema);
-const UserModel = mongoose.model('User', UserSchema);
-addUserSchemaStatics(UserSchema, UserModel);
+const schema  = UserSchema.schema;
+addUserSchemaHooks(schema);
+addUserSchemaMethods(schema);
+const UserModel = mongoose.model(UserSchema.tableName, schema);
+addUserSchemaStatics(schema, UserModel);
 
 module.exports = UserModel;

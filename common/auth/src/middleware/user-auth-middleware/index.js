@@ -1,6 +1,6 @@
 const {validateToken, validateUser} = require('./user-auth-middleware-helpers');
 
-const authAndValidateUser = async(req, res, next) => {
+const authAndValidateUserMiddleware = async(req, res, next) => {
     try {
         const token = validateToken(req.header('Authorization').replace('Bearer ', ''));
         const tokenData = validateToken(token);
@@ -14,7 +14,7 @@ const authAndValidateUser = async(req, res, next) => {
     }
 };
 
-const auth = async(req, res, next) => {
+const authMiddleware = async(req, res, next) => {
     try{
         const token = validateToken(req.header('Authorization').replace('Bearer ', ''));
         const tokenData = validateToken(token);
@@ -26,4 +26,4 @@ const auth = async(req, res, next) => {
     }
 };
 
-module.exports = {authAndValidateUser, auth};
+module.exports = {authAndValidateUserMiddleware, authMiddleware};

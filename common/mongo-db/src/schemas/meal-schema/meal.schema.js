@@ -11,7 +11,10 @@ const MealSchema = new Schema({
       type: String,
       required: true
     },
-    location: PointLocationSchema,
+    location: {
+        type: PointLocationSchema,
+        required: true
+    },
     cost: {
         type: Number,
         required: true
@@ -20,16 +23,16 @@ const MealSchema = new Schema({
         type: Number,
         required: true
     },
-    CreationTime: {
+    creationTime: {
         type: Date,
         required: true
     },
     activeOrders: {
         type: MealOrdersSchema,
     },
-    MealOrdersHistory: {
+    mealOrdersHistory: {
         type: ObjectId
     }
 });
 
-module.exports = MealSchema;
+module.exports = {tableName: 'meal', schema: MealSchema};

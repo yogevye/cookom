@@ -7,4 +7,4 @@ const MealOrdersHistorySchema = new Schema({
     }
 });
 
-module.exports = MealOrdersSchema;
+module.exports = {tableName: 'meal-orders-history', schema: MealOrdersHistorySchema};

@@ -12,4 +12,4 @@ const addCommonPostHooks = (userSchema) => {
     });
 };
 
-module.exports = {addPostHooks};
+module.exports = {addCommonPostHooks};

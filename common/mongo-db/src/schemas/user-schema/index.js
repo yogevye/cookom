@@ -3,4 +3,4 @@ import {addCommonPostHooks} from '../../common/common-hooks'
 
 addCommonPostHooks(UserSchema);
 
-module.exports = UserSchema;
+module.exports = {tableName: 'user', schema: UserSchema};

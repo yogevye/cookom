@@ -1,7 +1,7 @@
 const express = require('express');
 const passport = require('passport');
 const bodyParser = require('body-parser');
-const {auth, authAndValidateUser} = require('../middleware/user-auth-middleware');
+const {authAndValidateUserMiddleware} = require('../middleware/user-auth-middleware');
 const {login, signUp, logout, logoutAll} = require('./user-auth-handler/user-handler');
 
 const UserAuthRouter = express.Router();
@@ -16,9 +16,9 @@ UserAuthRouter.get('/me', auth, async(req, res) => {
     res.send(req.tokenData)
 });
 
-UserAuthRouter.post('/logout', authAndValidateUser, logout);
+UserAuthRouter.post('/logout', authAndValidateUserMiddleware(), logout);
 
-UserAuthRouter.post('/logoutall', authAndValidateUser, logoutAll);
+UserAuthRouter.post('/logoutall', authAndValidateUserMiddleware(), logoutAll);
 
 UserAuthRouter.route('/login')
     .post(passport.authenticate('localToken', {session: false}), login);

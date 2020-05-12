@@ -14,4 +14,4 @@ const OrderSchema = new Schema({
     },
 });
 
-module.exports = OrderSchema;
+module.exports = {tableName: 'order', schema: OrderSchema};
